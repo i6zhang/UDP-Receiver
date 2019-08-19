@@ -42,7 +42,7 @@ int main() {
 		if (receivefrom == SOCKET_ERROR) {
 			cout << "Receiving Data Failed & Error -> " << WSAGetLastError() << endl;
 		}
-		// convert the bytes to doubles 
+		// unpacking the buffer data - convert the bytes to doubles
 		for (int i = 0; i < 24; i = i + 8) {
 			memcpy(&value, &buffer[i], 8);
 			cout << value << endl; 
